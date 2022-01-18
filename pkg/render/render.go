@@ -1,10 +1,10 @@
 package render
 
 import (
-	"github.com/captainstorm21/go-bookings/pkg/config"
-	"github.com/captainstorm21/go-bookings/pkg/models"
 	"bytes"
 	"fmt"
+	"github.com/tsawler/bookings-app/pkg/config"
+	"github.com/tsawler/bookings-app/pkg/models"
 	"html/template"
 	"log"
 	"net/http"
@@ -26,7 +26,7 @@ func AddDefaultData(td *models.TemplateData) *models.TemplateData {
 }
 
 // RenderTemplate renders a template
-func RenderTemplate(w http.ResponseWriter, html string, td *models.TemplateData) {
+func RenderTemplate(w http.ResponseWriter, tmpl string, td *models.TemplateData) {
 	var tc map[string]*template.Template
 
 	if app.UseCache {
@@ -36,7 +36,7 @@ func RenderTemplate(w http.ResponseWriter, html string, td *models.TemplateData)
 		tc, _ = CreateTemplateCache()
 	}
 
-	t, ok := tc[html]
+	t, ok := tc[tmpl]
 	if !ok {
 		log.Fatal("Could not get template from template cache")
 	}
@@ -59,7 +59,7 @@ func CreateTemplateCache() (map[string]*template.Template, error) {
 
 	myCache := map[string]*template.Template{}
 
-	pages, err := filepath.Glob("./templates/*.page.html")
+	pages, err := filepath.Glob("./templates/*.page.tmpl")
 	if err != nil {
 		return myCache, err
 	}
@@ -71,13 +71,13 @@ func CreateTemplateCache() (map[string]*template.Template, error) {
 			return myCache, err
 		}
 
-		matches, err := filepath.Glob("./templates/*.layout.html")
+		matches, err := filepath.Glob("./templates/*.layout.tmpl")
 		if err != nil {
 			return myCache, err
 		}
 
 		if len(matches) > 0 {
-			ts, err = ts.ParseGlob("./templates/*.layout.html")
+			ts, err = ts.ParseGlob("./templates/*.layout.tmpl")
 			if err != nil {
 				return myCache, err
 			}
