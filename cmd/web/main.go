@@ -3,16 +3,17 @@ package main
 import (
 	"encoding/gob"
 	"fmt"
-	"github.com/alexedwards/scs/v2"
-	"github.com/tsawler/bookings-app/internal/config"
-	"github.com/tsawler/bookings-app/internal/handlers"
-	"github.com/tsawler/bookings-app/internal/helpers"
-	"github.com/tsawler/bookings-app/internal/models"
-	"github.com/tsawler/bookings-app/internal/render"
 	"log"
 	"net/http"
 	"os"
 	"time"
+
+	"github.com/CaptainStorm21/go-bookings/internal/config"
+	"github.com/CaptainStorm21/go-bookings/internal/handlers"
+	"github.com/CaptainStorm21/go-bookings/internal/helpers"
+	"github.com/CaptainStorm21/go-bookings/internal/models"
+	"github.com/CaptainStorm21/go-bookings/internal/render"
+	"github.com/alexedwards/scs/v2"
 )
 
 const portNumber = ":8080"

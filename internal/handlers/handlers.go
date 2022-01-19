@@ -3,11 +3,11 @@ package handlers
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/tsawler/bookings-app/internal/config"
-	"github.com/tsawler/bookings-app/internal/forms"
-	"github.com/tsawler/bookings-app/internal/helpers"
-	"github.com/tsawler/bookings-app/internal/models"
-	"github.com/tsawler/bookings-app/internal/render"
+	"github.com/CaptainStorm21/go-bookings/internal/config"
+	"github.com/CaptainStorm21/go-bookings/internal/forms"
+	"github.com/CaptainStorm21/go-bookings/internal/helpers"
+	"github.com/CaptainStorm21/go-bookings/internal/models"
+	"github.com/CaptainStorm21/go-bookings/internal/render"
 	"net/http"
 )
 

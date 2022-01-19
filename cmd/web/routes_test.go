@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
+	"github.com/CaptainStorm21/go-bookings/internal/config"
 	"github.com/go-chi/chi"
-	"github.com/tsawler/bookings-app/internal/config"
 	"testing"
 )
 

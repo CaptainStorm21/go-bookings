@@ -1,9 +1,9 @@
 package handlers
 
 import (
-	"github.com/tsawler/bookings-app/pkg/config"
-	"github.com/tsawler/bookings-app/pkg/models"
-	"github.com/tsawler/bookings-app/pkg/render"
+	"github.com/CaptainStorm21/go-bookings/pkg/config"
+	"github.com/CaptainStorm21/go-bookings/pkg/models"
+	"github.com/CaptainStorm21/go-bookings/pkg/render"
 	"net/http"
 )
 

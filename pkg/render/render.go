@@ -3,8 +3,8 @@ package render
 import (
 	"bytes"
 	"fmt"
-	"github.com/tsawler/bookings-app/pkg/config"
-	"github.com/tsawler/bookings-app/pkg/models"
+	"github.com/CaptainStorm21/go-bookings/pkg/config"
+	"github.com/CaptainStorm21/go-bookings/pkg/models"
 	"html/template"
 	"log"
 	"net/http"
